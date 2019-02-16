@@ -7,7 +7,8 @@
     max-width: 100%;
 }
 a{
-    color: #5499C7
+    color: #5EA2C1;
+    text-decoration: none;
 }
 .you-are-here{
     width: 1.5rem;
@@ -15,15 +16,24 @@ a{
 
 .menu-item {
     width: 10%;
+    padding: 2%;
+}
+.menu-item.page {
+    background-color: #5EA2C1;
+    border-radius: 12px;
+}
+.menu-item.page a{
+    color:white;
 }
 
 body{
-    background-color: #E9F7EF;
+    background-color: rgba(127, 201, 180, 45%);
     font-family: 'Raleway', san-serif;
 }
 .site-header{
  text-align: center;
  font-weight: 800;
+ padding: 2%;
  width:100%;
 }
 
