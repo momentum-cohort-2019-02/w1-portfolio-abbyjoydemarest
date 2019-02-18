@@ -2,8 +2,9 @@
     box-sizing: content-box;
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', san-serif;
+    font-family: 'Raleway', 'san-serif';
     max-width: 100%;
+    align-items: center;
 }
 
 a {
@@ -15,18 +16,25 @@ a {
 .site-header{
     border-bottom: 2px solid  rgba(127, 201, 180, 75%);
     border-bottom-width: 90%;
-    margin-right: 5%;
+    width:95%;
+    margin-right: 2%;
+    margin-left: 0%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
 img {
     width: 100%;
-    border-bottom: 2px solid  rgba(127, 201, 180, 75%);
+    border-bottom: 3px solid  rgba(127, 201, 180, 75%);
+    border-right: 1px solid  rgba(127, 201, 180, 75%);
 }
 .you-are-here {
     width: 1.25rem;
     padding: 0;
     margin: 0;
-    border-bottom:0;
+    border-bottom: 0;
+    border-right: 0;
 }
 .content{
     width: 90%;
@@ -35,8 +43,8 @@ img {
     justify-content: center;
     align-items: center;
     border-top: 3px solid  rgba(127, 201, 180, 15%);
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 p {
@@ -44,11 +52,12 @@ p {
 }
 
 .menu-item {
-    width: 10%;
-    padding: 2%;
+    width: 7.5%;
+    padding: 1%;
+    justify-content:flex-start;
     align-items: center;
-    align-content: center;
-    font-size: 1.5rem;
+    align-content: start;
+    font-size: 1rem;
     flex-wrap: nowrap;
 }
 
@@ -59,28 +68,24 @@ p {
 
 .menu-item.active a {
     color: black;
-
 }
 .menu-item.active{
     background-color:#ffffff;
     border-radius: 12px;  
-    padding: 1%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border-bottom: 1.5px solid  rgba(127, 201, 180, 75%);
 }
 
 body {
+    width: 100%;
     background-color: rgba(127, 201, 180, 45%);
     font-family: 'Raleway', san-serif;
     margin: 2%;
     align-items: center;
     align-content: center;
-}
-
-.site-header {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 800;
-    padding: 2%;
-    width: 100%;
 }
 
 .menu ul {
@@ -99,14 +104,15 @@ body {
 .instructions {
     font-weight: 800;
 }
-
+.contact-info {
+    width:90%;
+}
 .contact-info ul{
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: 90%;
     margin-left:5%;
     margin-right:5%;
 }
@@ -114,7 +120,7 @@ body {
     text-decoration-style: none;
 }
 .contact-info li{
-width: 33.33%;
+width: 30%;
 }
 .skills ul{
     list-style-type: none;
@@ -254,10 +260,17 @@ footer .email{
     width:25%;
 }
 
-@media screen and (min-width:768px and max-width:922px){
+@media screen and (min-width:768px) and (max-width:922px){
 *{
-    width: 922px;
     max-width: 100%;
+    align-items: center;
+    margin:0 auto;
+}
+.body{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
     .skills ul{
@@ -279,9 +292,9 @@ footer .email{
     .jobs{
         list-style-type: none;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
-        align-content: center;
+        align-content: flex-start;
         align-items: center;  
         width:100%;
         
@@ -290,8 +303,10 @@ footer .email{
     .job{
         list-style-type: none;
         display: flex;
-        justify-content:flex-start;
+        justify-content:space-between;
         flex-direction: row;
+        border-bottom: 1.5px solid  rgba(127, 201, 180, 75%);
+
     }
 
     .job-details{
@@ -301,6 +316,71 @@ footer .email{
     .job-details-2{
         width:100%;
     }
+    .you-are-here {
+        width: 1.25rem;
+        padding: 0;
+        margin: 0;
+        border-bottom:0;
+    }
 
+}
+@media screen and (min-width:922px) and (max-width:1500px){
+*{
+align-content: center;
+}
+body{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.skills ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+    margin-left:25%;
+    margin-right:25%;
+}
 
+.skills li{
+    width: 25%;
+    padding: 2%;
+}
+
+.jobs{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;  
+    width:100%;
+    
+}
+
+.job{
+    list-style-type: none;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    border-bottom: 1.5px solid  rgba(127, 201, 180, 75%);
+
+}
+
+.job-details{
+    width:100%;
+}
+
+.job-details-2{
+    width:100%;
+}
+.you-are-here {
+    width: 1.25rem;
+    padding: 0;
+    margin: 0;
+    border-bottom:0;
+}
 }
